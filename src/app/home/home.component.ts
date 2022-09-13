@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {     //authenticating the user 
     if(localStorage.getItem('token')!=null){
       this.userService.checkToken().subscribe((response: any)=>{
+        console.log(response);
         this.router.navigate(['/projects/dashboard']);
       }, (error: any)=>{
         console.log(error);
@@ -37,7 +38,7 @@ export class HomeComponent implements OnInit {
     dialogConfig.width="500px";
     this.dialog.open(ForgotPasswordComponent,dialogConfig)
   }
-  loginAction() {
+  loginAction(){
 const dialogConfig= new MatDialogConfig();
 dialogConfig.width="500px";
 this.dialog.open(LoginComponent,dialogConfig);

@@ -26,8 +26,8 @@ export class RouteGuardService {
       this.router.navigate(['/']);
     }
     let checkRole=false;
-    for(let i in expectedRoleArray){
-      if(i== tokenPayload.role){
+    for(let i=0; i<expectedRoleArray.length;i++){
+      if(expectedRoleArray[i]== tokenPayload.role){
         checkRole=true;
       }
     }

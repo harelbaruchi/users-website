@@ -3,21 +3,30 @@
         <b><span>Dashboard</span></b>
     </mat-card>
     <br>
-    <div class="card">
-        <div class="container">
-            <h2 class="title">Total Projects: </h2>
-            <h1 class="title"> {{data?.projects}} </h1>
-            <p> <button class="button" [routerLink]="['/projects/projects']">View Projects</button> </p>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2 class="title">Total Projects: </h2>
+                    <h1 class="title"> {{data?.project}} </h1>
+                    <p> <button class="button" [routerLink]="['/projects/projects']">View Projects</button> </p>
+                </div>
+        
+            </div>
         </div>
-
     </div>
-
-    <div class="card">
-        <div class="container">
-            <h2 class="title">Total comments: </h2>
-            <h1 class="title"> {{data?.comments}} </h1>
-            <p> <button class="button" [routerLink]="['/projects/comments']">View comments</button> </p>
+   <div class="row">
+    <div class="column">
+        <div class="card">
+            <div class="container">
+                <h2 class="title">Total comments: </h2>
+                <h1 class="title"> {{data?.comment}} </h1>
+                <p> <button class="button" [routerLink]="['/projects/comments']">View comments</button> </p>
+            </div>
+    
         </div>
-
     </div>
+   </div>
+
+    
 </body>

@@ -19,18 +19,18 @@ const routes: Routes = [
         path: '',
         loadChildren:
           () => import('./material-component/material.module').then(m => m.MaterialComponentsModule), // route guard implementation.
-          // canActivate:[RouteGuardService],
-          // data: {
-          //   expectedRole: ['admin','user']
-          // }
+          canActivate:[RouteGuardService],
+          data: {
+            expectedRole: ['admin','user']
+          }
       },
       {
         path: 'dashboard',
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
-        // canActivate:[RouteGuardService],
-        // data: {
-        //   expectedRole: ['admin','user']
-        // }
+        canActivate:[RouteGuardService],
+        data: {
+          expectedRole: ['admin','user']
+        }
       }
     ]
   },

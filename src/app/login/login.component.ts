@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
     }
     this.userService.login(data).subscribe((response: any)=>{
       this.dialogRef.close();
+      console.log(response.token);
        localStorage.setItem('token', response.token);
        this.router.navigate(['/projects/dashboard'])
     }, (error)=>{
