@@ -21,6 +21,7 @@ import { TokenInterceptorInterceptor } from './services/token-interceptor.interc
 
 
 
+
 @NgModule({
   declarations: [	
     AppComponent,
@@ -31,6 +32,7 @@ import { TokenInterceptorInterceptor } from './services/token-interceptor.interc
     SignupComponent,
     ForgotPasswordComponent,
     LoginComponent
+    
    ],
   imports: [
     BrowserModule,
