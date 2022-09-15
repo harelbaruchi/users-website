@@ -12,12 +12,14 @@ import { GlobalConstants } from 'src/app/shared/global-constants';
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent implements OnInit {
+  
   onAddProject= new EventEmitter();
   onEdditProject= new EventEmitter();
   projectForm: any= FormGroup;
   dialogAction: any= "Add";
   action: any="Add";
   responseMessage: any;
+  statuss: string[]=["in progress", "complete", "cancelled"]
 
   constructor(@Inject(MAT_DIALOG_DATA) public dialogData: any,
   private formBuilder: FormBuilder, private projectService: ProjectService,
@@ -100,6 +102,5 @@ export class ProjectComponent implements OnInit {
       this.snackbarService.openSnackBar(this.responseMessage, GlobalConstants.error);
     })
   }
-
 
 }

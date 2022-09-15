@@ -9,9 +9,17 @@ export interface Menu{
     role: string;
 }
 
+export enum Status{
+    INPROGRESS="INPROGRESS",
+    CANCELLED="cancelled",
+    CLOSED="closed"
+}
+
 const MENUITEMS=[
     {state: "dashboard", name: "dashboard", icon: 'dashboard', role: ''},
-    {state: "project", name: "Manage Project", icon: 'build-project', role: ''}
+    {state: "project", name: "Manage Project", icon: 'build-project', role: ''},
+    {state: "comment", name: "Manage comment", icon: 'message', role: ''}
+
 ];
 
 @Injectable()

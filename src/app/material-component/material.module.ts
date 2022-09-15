@@ -13,6 +13,8 @@ import { ViewBillProductsComponent } from './dialog/view-bill-products/view-bill
 import { ConfirmationComponent } from './dialog/confirmation/confirmation.component';
 import { ManageProjectComponent } from './manage-project/manage-project.component';
 import { ProjectComponent } from './dialog/project/project.component';
+import { ManageCommentComponent } from './manage-comment/manage-comment.component';
+import { CommentComponent } from './dialog/comment/comment.component';
 
 @NgModule({
   imports: [
@@ -30,7 +32,9 @@ import { ProjectComponent } from './dialog/project/project.component';
     ViewBillProductsComponent,
     ConfirmationComponent,
     ManageProjectComponent,
-    ProjectComponent    
+    ProjectComponent,
+    ManageCommentComponent,
+    CommentComponent    
   ]
 })
 export class MaterialComponentsModule {}

@@ -47,10 +47,15 @@
             <div fxLayout="row wrap">
             <mat-form-field appearance="fill" fxFlex>
                 <mat-label>status</mat-label>
-                <input matInput formControlName="status" required>
+                <!-- <input matInput formControlName="status" required>
                 <mat-error *ngIf="projectForm.controls.status.touched && projectForm.controls.status.invalid">
                     <span *ngIf="projectForm.controls.status.errors.required">this field is mandatory</span>
-                </mat-error>
+                </mat-error> -->
+                <mat-select formControlName="status">
+                    <mat-option *ngFor="let status of statuss" [value]="status">
+                      {{ status }}
+                    </mat-option>
+                  </mat-select>
             </mat-form-field>
             </div>
         </div>
