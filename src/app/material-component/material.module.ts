@@ -9,12 +9,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialRoutes } from './material.routing';
 import { MaterialModule } from '../shared/material-module';
-import { ViewBillProductsComponent } from './dialog/view-bill-products/view-bill-products.component';
 import { ConfirmationComponent } from './dialog/confirmation/confirmation.component';
-import { ManageProjectComponent } from './manage-project/manage-project.component';
-import { ProjectComponent } from './dialog/project/project.component';
-import { ManageCommentComponent } from './manage-comment/manage-comment.component';
-import { CommentComponent } from './dialog/comment/comment.component';
+
+
 import { ManageJokeComponent } from './manage-joke/manage-joke.component';
 import { JokeComponent } from './dialog/joke/joke.component';
 
@@ -31,12 +28,7 @@ import { JokeComponent } from './dialog/joke/joke.component';
   ],
   providers: [],
   declarations: [
-    ViewBillProductsComponent,
     ConfirmationComponent,
-    ManageProjectComponent,
-    ProjectComponent,
-    ManageCommentComponent,
-    CommentComponent,
     ManageJokeComponent,
     JokeComponent    
   ]
