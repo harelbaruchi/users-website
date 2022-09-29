@@ -15,6 +15,8 @@ import { ManageProjectComponent } from './manage-project/manage-project.componen
 import { ProjectComponent } from './dialog/project/project.component';
 import { ManageCommentComponent } from './manage-comment/manage-comment.component';
 import { CommentComponent } from './dialog/comment/comment.component';
+import { ManageJokeComponent } from './manage-joke/manage-joke.component';
+import { JokeComponent } from './dialog/joke/joke.component';
 
 @NgModule({
   imports: [
@@ -34,7 +36,9 @@ import { CommentComponent } from './dialog/comment/comment.component';
     ManageProjectComponent,
     ProjectComponent,
     ManageCommentComponent,
-    CommentComponent    
+    CommentComponent,
+    ManageJokeComponent,
+    JokeComponent    
   ]
 })
 export class MaterialComponentsModule {}

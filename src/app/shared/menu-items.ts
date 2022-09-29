@@ -17,8 +17,7 @@ export enum Status{
 
 const MENUITEMS=[
     {state: "dashboard", name: "dashboard", icon: 'dashboard', role: ''},
-    {state: "project", name: "Manage Project", icon: 'build-project', role: ''},
-    {state: "comment", name: "Manage comment", icon: 'message', role: ''}
+    {state: "joke", name: "Manage Jokes", icon: 'book', role: ''}
 
 ];
 
