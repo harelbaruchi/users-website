@@ -12,8 +12,10 @@ import { MaterialModule } from '../shared/material-module';
 import { ConfirmationComponent } from './dialog/confirmation/confirmation.component';
 
 
-import { ManageJokeComponent } from './manage-joke/manage-joke.component';
-import { JokeComponent } from './dialog/joke/joke.component';
+
+
+import { ManageUserComponent } from './manage-user/manage-user.component';
+import { UserComponent } from './dialog/user/user.component';
 
 @NgModule({
   imports: [
@@ -29,8 +31,8 @@ import { JokeComponent } from './dialog/joke/joke.component';
   providers: [],
   declarations: [
     ConfirmationComponent,
-    ManageJokeComponent,
-    JokeComponent    
+    ManageUserComponent,
+    UserComponent    
   ]
 })
 export class MaterialComponentsModule {}
