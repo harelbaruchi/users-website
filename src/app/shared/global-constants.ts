@@ -16,5 +16,10 @@ export class GlobalConstants{
 
     public static success: string="success";
 
+    public static showFlag: boolean=true;
+
+    //url 
+    public static usersUrl: string="'https://randomuser.me/api/?results=10'"
+
 
 }

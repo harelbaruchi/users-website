@@ -5,132 +5,158 @@
 </mat-toolbar>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="userForm">
+        <table>
+            
+                <tr>
+                    <div fxFlex fxLayout="row wrap" *ngIf="dialogData.action==='Add'">
+                        <div fxFlex fxLayout="column ">
+                            <mat-form-field appearance="fill" fxFlex>
+                                <mat-label>Id</mat-label>
+                                <input matInput formControlName="id" required>
+                                <mat-error *ngIf="userForm.controls.id.touched && userForm.controls.id.invalid">
+                                    <span *ngIf="userForm.controls.id.errors.required"> this field is mandatory</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </tr>
+                
+                <tr>
+                    <ng-container class="form-field">
+                        <div fxFlex fxLayout="row wrap">
+                            <div fxFlex fxLayout="column ">
+                                <mat-form-field appearance="fill" fxFlex>
+                                    <mat-label>User Title</mat-label>
+                                    <input matInput formControlName="title" required>
+                                    <mat-error *ngIf="userForm.controls.title.touched && userForm.controls.title.invalid">
+                                        <span *ngIf="userForm.controls.title.errors.required"> this field is mandatory</span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </ng-container>
+                    
+                </tr>
+                
+                <tr>
+                    <div fxFlex fxLayout="row wrap">
+                        <div fxFlex fxLayout="column ">
+                            <mat-form-field appearance="fill" fxFlex>
+                                <mat-label>First Name</mat-label>
+                                <input matInput formControlName="first" required>
+                                <mat-error *ngIf="userForm.controls.first.touched && userForm.controls.first.invalid">
+                                    <span *ngIf="userForm.controls.first.errors.required"> this field is mandatory</span>
+                                    <span *ngIf="userForm.controls.first.errors.pattern">Not a valid Name</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </tr>
+               
+                <tr>
+                    <div fxFlex fxLayout="row wrap">
+                        <div fxFlex fxLayout="column ">
+                            <mat-form-field appearance="fill" fxFlex>
+                                <mat-label>Last Name</mat-label>
+                                <input matInput formControlName="last" required>
+                                <mat-error *ngIf="userForm.controls.last.touched && userForm.controls.last.invalid">
+                                    <span *ngIf="userForm.controls.last.errors.required"> this field is mandatory</span>
+                                    <span *ngIf="userForm.controls.last.errors.pattern">Not a valid name</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </tr>
+               
+                <tr>
+                    <div fxFlex fxLayout="row wrap">
+                        <div fxFlex fxLayout="column ">
+                            <mat-form-field appearance="fill" fxFlex>
+                                <mat-label>Email</mat-label>
+                                <input matInput formControlName="email" required>
+                                <mat-error *ngIf="userForm.controls.email.touched && userForm.controls.email.invalid">
+                                    <span *ngIf="userForm.controls.email.errors.required"> this field is mandatory</span>
+                                    <span *ngIf="userForm.controls.email.errors.pattern">Not a valid email address</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </tr>
+               
+                <tr>
+                    <div fxFlex fxLayout="row wrap">
+                        <div fxFlex fxLayout="column">
+                            <mat-form-field appearance="fill" fxFlex>
+                                <mat-label>Country</mat-label>
+                                <input matInput formControlName="country" required >
+                                <mat-error *ngIf="userForm.controls.country.touched && userForm.controls.country.invalid">
+                                    <span *ngIf="userForm.controls.country.errors.required"> this field is mandatory</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </tr>
+                
+                <tr>
+                    <div fxFlex fxLayout="row wrap">
+                        <div fxFlex fxLayout="column">
+                            <mat-form-field appearance="fill" fxFlex>
+                                <mat-label>City</mat-label>
+                                <input matInput formControlName="city" required>
+                                <mat-error *ngIf="userForm.controls.city.touched && userForm.controls.city.invalid">
+                                    <span *ngIf="userForm.controls.city.errors.required"> this field is mandatory</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </tr>
+                
+                <tr>
+                    <div fxFlex fxLayout="row wrap">
+                        <div fxFlex fxLayout="column">
+                            <mat-form-field appearance="fill" fxFlex>
+                                <mat-label>street</mat-label>
+                                <input matInput formControlName="streetName" required>
+                                <mat-error *ngIf="userForm.controls.streetName.touched && userForm.controls.streetName.invalid">
+                                    <span *ngIf="userForm.controls.streetName.errors.required"> this field is mandatory</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </tr>
 
-        <div fxFlex fxLayout="column" *ngIf="dialogData.action==='Add'">
-            <div fxFlex fxLayout="row wrap">
-                <mat-form-field appearance="fill" fxFlex>
-                    <mat-label>Id</mat-label>
-                    <input matInput formControlName="id" required>
-                    <mat-error *ngIf="userForm.controls.id.touched && userForm.controls.id.invalid">
-                        <span *ngIf="userForm.controls.id.errors.required"> this field is mandatory</span>
-                    </mat-error>
-                </mat-form-field>
-            </div>
-        </div>
+                <tr>
+                    <div fxFlex fxLayout="row wrap">
+                        <div fxFlex fxLayout="column">
+                            <mat-form-field appearance="fill" fxFlex>
+                                <mat-label>number</mat-label>
+                                <input matInput formControlName="streetNumber" required>
+                                <mat-error *ngIf="userForm.controls.streetNumber.touched && userForm.controls.streetNumber.invalid">
+                                    <span *ngIf="userForm.controls.streetNumber.errors.required"> this field is mandatory</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </tr>
 
-        <div fxFlex fxLayout="column">
-            <div fxFlex fxLayout="row wrap">
-                <mat-form-field appearance="fill" fxFlex>
-                    <mat-label>User Title</mat-label>
-                    <input matInput formControlName="title" required>
-                    <mat-error *ngIf="userForm.controls.title.touched && userForm.controls.title.invalid">
-                        <span *ngIf="userForm.controls.title.errors.required"> this field is mandatory</span>
-                    </mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-
-        <div fxFlex fxLayout="column">
-            <div fxFlex fxLayout="row wrap">
-                <mat-form-field appearance="fill" fxFlex>
-                    <mat-label>First Name</mat-label>
-                    <input matInput formControlName="first" required>
-                    <mat-error *ngIf="userForm.controls.first.touched && userForm.controls.first.invalid">
-                        <span *ngIf="userForm.controls.first.errors.required"> this field is mandatory</span>
-                        <span *ngIf="userForm.controls.first.errors.pattern">Not a valid Name</span>
-                    </mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-
-        <div fxFlex fxLayout="column">
-            <div fxFlex fxLayout="row wrap">
-                <mat-form-field appearance="fill" fxFlex>
-                    <mat-label>Last Name</mat-label>
-                    <input matInput formControlName="last" required>
-                    <mat-error *ngIf="userForm.controls.last.touched && userForm.controls.last.invalid">
-                        <span *ngIf="userForm.controls.last.errors.required"> this field is mandatory</span>
-                        <span *ngIf="userForm.controls.last.errors.pattern">Not a valid name</span>
-                    </mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-
-        <div fxFlex fxLayout="column">
-            <div fxFlex fxLayout="row wrap">
-                <mat-form-field appearance="fill" fxFlex>
-                    <mat-label>Email</mat-label>
-                    <input matInput formControlName="email" required>
-                    <mat-error *ngIf="userForm.controls.email.touched && userForm.controls.email.invalid">
-                        <span *ngIf="userForm.controls.email.errors.required"> this field is mandatory</span>
-                        <span *ngIf="userForm.controls.email.errors.pattern">Not a valid email address</span>
-                    </mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-
-        <div fxFlex fxLayout="column" *ngIf="dialogData.action==='Add'">
-            <div fxFlex fxLayout="row wrap">
-                <mat-form-field appearance="fill" fxFlex>
-                    <mat-label>Country</mat-label>
-                    <input matInput formControlName="country" required>
-                    <mat-error *ngIf="userForm.controls.country.touched && userForm.controls.country.invalid">
-                        <span *ngIf="userForm.controls.country.errors.required"> this field is mandatory</span>
-                    </mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-
-        <div fxFlex fxLayout="column" *ngIf="dialogData.action==='Add'">
-            <div fxFlex fxLayout="row wrap">
-                <mat-form-field appearance="fill" fxFlex>
-                    <mat-label>City</mat-label>
-                    <input matInput formControlName="city" required>
-                    <mat-error *ngIf="userForm.controls.city.touched && userForm.controls.city.invalid">
-                        <span *ngIf="userForm.controls.city.errors.required"> this field is mandatory</span>
-                    </mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-
-        <div fxFlex fxLayout="column" *ngIf="dialogData.action==='Add'">
-            <div fxFlex fxLayout="row wrap">
-                <mat-form-field appearance="fill" fxFlex>
-                    <mat-label>street</mat-label>
-                    <input matInput formControlName="streetName" required>
-                    <mat-error *ngIf="userForm.controls.streetName.touched && userForm.controls.streetName.invalid">
-                        <span *ngIf="userForm.controls.streetName.errors.required"> this field is mandatory</span>
-                    </mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-
-        <div fxFlex fxLayout="column" *ngIf="dialogData.action==='Add'">
-            <div fxFlex fxLayout="row wrap">
-                <mat-form-field appearance="fill" fxFlex>
-                    <mat-label>number</mat-label>
-                    <input matInput formControlName="streetNumber" required>
-                    <mat-error *ngIf="userForm.controls.streetNumber.touched && userForm.controls.streetNumber.invalid">
-                        <span *ngIf="userForm.controls.streetNumber.errors.required"> this field is mandatory</span>
-                    </mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-
-        <div fxFlex fxLayout="column" *ngIf="dialogData.action==='Add'">
-            <div fxFlex fxLayout="row wrap">
-                <mat-form-field appearance="fill" fxFlex>
-                    <mat-label>Image</mat-label>
-                    <input matInput formControlName="image" required>
-                    <mat-error *ngIf="userForm.controls.image.touched && userForm.controls.image.invalid">
-                        <span *ngIf="userForm.controls.image.errors.required"> this field is mandatory</span>
-                    </mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-        
+                <tr>
+                    <div fxFlex fxLayout="row wrap" *ngIf="dialogData.action==='Add'">
+                        <div fxFlex fxLayout="column">
+                            <mat-form-field appearance="fill" fxFlex>
+                                <mat-label>Image</mat-label>
+                                <input matInput formControlName="image" required>
+                                <mat-error *ngIf="userForm.controls.image.touched && userForm.controls.image.invalid">
+                                    <span *ngIf="userForm.controls.image.errors.required"> this field is mandatory</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    
+                </tr>
 
 
+            
+        </table>
 
     </form>
 
@@ -138,6 +164,6 @@
 </mat-dialog-content>
 <mat-dialog-actions align="center">
     <button mat-raised-button color="primary" type="sumbit" (click)="handleSubmit()"
-    [disabled]="!(userForm.valid)"> {{action}} </button>
+    [disabled]="this.dialogAction!='Edit'&&!(userForm.valid)"> {{action}} </button>
     <button mat-raised-button color="primary" mat-dialog-close>Close</button>
 </mat-dialog-actions>

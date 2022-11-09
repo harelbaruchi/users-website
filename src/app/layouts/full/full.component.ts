@@ -9,6 +9,7 @@ import { ChangeDetectorRef, Component, OnDestroy, AfterViewInit } from '@angular
   styleUrls: []
 })
 export class FullComponent implements OnDestroy, AfterViewInit {
+  hideStart: boolean=false;
   mobileQuery: MediaQueryList;
 
   private _mobileQueryListener: () => void;

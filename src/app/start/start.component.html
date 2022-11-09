@@ -1,0 +1,14 @@
+<div class="row" *ngIf="show">
+    <div class="column">
+        <div class="card">
+            <div class="container">
+                <h2 class="title">Click Here To Start </h2>
+                
+                <p> 
+                    <button (click)="show=!show" class="button" [routerLink]="['/projects/user']">View Users</button>
+                 </p>
+            </div>
+    
+        </div>
+    </div>
+</div>

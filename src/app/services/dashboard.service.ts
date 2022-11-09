@@ -6,12 +6,9 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class DashboardService {
-  url= environment.apiUrl;
+  
 
+  constructor() { }
 
-  constructor(private httpClient: HttpClient) { }
-
-  getDetails(){
-    return this.httpClient.get(this.url+ "/dashboard/details/")
-  }
+  
 }

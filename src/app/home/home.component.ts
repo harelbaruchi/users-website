@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { ForgotPasswordComponent } from '../forgot-password/forgot-password.component';
-import { LoginComponent } from '../login/login.component';
-import { UserService } from '../services/user.service';
-import { SignupComponent } from '../signup/signup.component';
+// import { ForgotPasswordComponent } from '../forgot-password/forgot-password.component';
+// import { LoginComponent } from '../login/login.component';
+// import { UserService } from '../services/user.service';
+// import { SignupComponent } from '../signup/signup.component';
 
 @Component({
   selector: 'app-home',
@@ -13,35 +13,27 @@ import { SignupComponent } from '../signup/signup.component';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private dialog: MatDialog, private router: Router, private userService: UserService) { }
+  constructor(private dialog: MatDialog, private router: Router) { }
 
   ngOnInit(): void {     //authenticating the user 
-    if(localStorage.getItem('token')!=null){
-      this.userService.checkToken().subscribe((response: any)=>{
-        console.log(response);
-        this.router.navigate(['/projects/dashboard']);
-      }, (error: any)=>{
-        console.log(error);
-        
-      })
-    }
+    this.router.navigate(['/projects/dashboard']);
   }
 
-  signupAction(){
-    const dialogConfig= new MatDialogConfig();
-    dialogConfig.width="550px";
-    this.dialog.open(SignupComponent, dialogConfig);
+//   signupAction(){
+//     const dialogConfig= new MatDialogConfig();
+//     dialogConfig.width="550px";
+//     this.dialog.open(SignupComponent, dialogConfig);
     
-  }
-  forgotPasswordAction(){
-    const dialogConfig= new MatDialogConfig();
-    dialogConfig.width="500px";
-    this.dialog.open(ForgotPasswordComponent,dialogConfig)
-  }
-  loginAction(){
-const dialogConfig= new MatDialogConfig();
-dialogConfig.width="500px";
-this.dialog.open(LoginComponent,dialogConfig);
-  }
+//   }
+//   forgotPasswordAction(){
+//     const dialogConfig= new MatDialogConfig();
+//     dialogConfig.width="500px";
+//     this.dialog.open(ForgotPasswordComponent,dialogConfig)
+//   }
+//   loginAction(){
+// const dialogConfig= new MatDialogConfig();
+// dialogConfig.width="500px";
+// this.dialog.open(LoginComponent,dialogConfig);
+//   }
 
 }

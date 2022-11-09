@@ -13,9 +13,10 @@ import { FullComponent } from './layouts/full/full.component';
 import { AppHeaderComponent } from './layouts/full/header/header.component';
 import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { SignupComponent } from './signup/signup.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { LoginComponent } from './login/login.component';
+import { StartComponent } from './start/start.component';
+// import { SignupComponent } from './signup/signup.component';
+// import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+// import { LoginComponent } from './login/login.component';
 // import { TokenInterceptorInterceptor } from './services/token-interceptor.interceptor';
 
 
@@ -29,9 +30,7 @@ import { LoginComponent } from './login/login.component';
     FullComponent,
     AppHeaderComponent,
     AppSidebarComponent,
-    SignupComponent,
-    ForgotPasswordComponent,
-    LoginComponent
+    StartComponent,
     
    ],
   imports: [
